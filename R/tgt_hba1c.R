@@ -14,5 +14,5 @@ tgt_hba1c <- function(x, y) { # x is df to be added to [mutated] # y is numeric 
     hba1c_75 <- as.logical(if_else(x <= 75, 1, 0)) # 9.0%
     hba1c_86 <- as.logical(if_else(x <= 86, 1, 0)) # 10.0%
   }
-  return(mutate(x, hba1c_48 = hba1c_48, hba1c_53 = hba1c_53, hba1c_58 = hba1c_58, hba1c_64 = hba1c_64, hba1c_69 = hba1c_69, hba1c_75 = hba1c_75, hba1c_86 = hba1c_86))
+  return(dplyr::mutate(x, hba1c_48 = hba1c_48, hba1c_53 = hba1c_53, hba1c_58 = hba1c_58, hba1c_64 = hba1c_64, hba1c_69 = hba1c_69, hba1c_75 = hba1c_75, hba1c_86 = hba1c_86))
 }

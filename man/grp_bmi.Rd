@@ -48,7 +48,7 @@ Julian Collins
 data <- rnorm(10, mean = 30, sd = 5)
 
 # create new ordered factor column giving corresponding obesity group values
-bmi_groups <- bmi_grp(data))
+bmi_groups <- grp_bmi(data)
 
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the

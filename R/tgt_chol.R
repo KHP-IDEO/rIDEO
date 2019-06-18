@@ -11,5 +11,5 @@ tgt_chol <- function(x, y) { # x is df to be added to [mutated] # y is numeric c
     chol_75 <- as.logical(if_else(x <= 7.5, 1, 0))
     chol_90 <- as.logical(if_else(x <= 9.0, 1, 0))
   }
-  return(mutate(x, chol_4 = chol_40, chol_5 = chol_50, chol_75 = chol_75, chol_90 = chol_90))
+  return(dplyr::mutate(x, chol_4 = chol_40, chol_5 = chol_50, chol_75 = chol_75, chol_90 = chol_90))
 }
