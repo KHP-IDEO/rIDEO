@@ -1,7 +1,7 @@
 Package: rIDEO
 Type: Package
 Title: IDEO functions
-Version: 0.1.0
+Version: 0.1.1
 Author: Julian Collins
 Maintainer: Julian Collins <julian.collins@kcl.ac.uk>
 Description: The package provides a range of functionality for managing data within the IDEO data warehouse.
