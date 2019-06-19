@@ -51,7 +51,7 @@ Julian Collins
 data <- tibble::tibble(hba1c_values = rnorm(25, 65, 15))
 
 # Measure the HbA1c test results against the full set of targets, adding logical variables to the dataframe
-data <- tgt_hba1c(data, hba1c_values)
+data <- tgt_hba1c(data, data$hba1c_values)
 
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
