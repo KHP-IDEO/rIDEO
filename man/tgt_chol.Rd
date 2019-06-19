@@ -18,6 +18,7 @@ Dataframe containing a variable of total cholesterol test results. The created t
 \item{y}{
 Numeric vector of total cholesterol values [mmol/l].
 }
+}
 \details{
 %%  ~~ If necessary, more details than the description above ~~
 }
