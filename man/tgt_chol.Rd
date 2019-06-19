@@ -15,10 +15,8 @@ tgt_chol(x)
   \item{x}{
 Dataframe containing a variable of total cholesterol test results. The created target variables will be appended to this dataframe.
 }
-}
 \item{y}{
 Numeric vector of total cholesterol values [mmol/l].
-}
 }
 \details{
 %%  ~~ If necessary, more details than the description above ~~
