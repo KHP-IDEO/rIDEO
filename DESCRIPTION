@@ -4,11 +4,11 @@ Title: IDEO functions
 Version: 0.1.1
 Author: Julian Collins
 Maintainer: Julian Collins <julian.collins@kcl.ac.uk>
-Description: The package provides a range of functionality for managing data within the IDEO data warehouse.
+Description: The package provides a range of functionality used for managing data within the IDEO data warehouse.
     IDEO contains a wide range of clinical, service usage and demographic data for people with diabetes and related health conditions.
     The functions here mostly relate to transforming and classifiying data into new variables, both as labelled groups (factors), 
     and as logical flags to measure test results against treatment targets.
-    THE PACKAGE AND FUNCTIONALITY IS INTENDED SOLELY FOR USING IN A RESEARCH/SECONDARY USE/REPORTING CONTEXT. 
+    THE PACKAGE AND FUNCTIONALITY IS INTENDED SOLELY FOR USE IN A RESEARCH/SECONDARY USE/REPORTING CONTEXT. 
     IT IS NOT INTENDED FOR IMPLEMENTATION WITHIN CLINICAL SYSTEMS FOR THE PURPOSES OF DIRECT CARE. 
 License: GNU AGPLv3
 Encoding: UTF-8
