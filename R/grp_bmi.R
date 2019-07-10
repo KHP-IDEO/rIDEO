@@ -23,7 +23,7 @@ grp_bmi <- function(x, depth ='full', style = 'name') { ## x is numeric BMI vari
                                     dplyr::if_else(x >=18.5 & x <=25, "Healthy Weight",
                                                    dplyr::if_else(x >25 & x <30, "Overweight",
                                                                   dplyr::if_else(x >=30, "Obese", NA_character_
-                                                                  )))), ordered = TRUE, levels = c( "Underweight", "Healthy Weight", "Overweight", "Obesity"))
+                                                                  )))), ordered = TRUE, levels = c( "Underweight", "Healthy Weight", "Overweight", "Obese"))
   }
   # check output group detail
   else if(depth == 'full' & style == 'num') {
