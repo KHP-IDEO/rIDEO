@@ -14,7 +14,8 @@ grp_ckd <- function(x, style = 'name') { ## x is numeric eGFR variable
                                                                   dplyr::if_else(x >=4 & x <60, "Stage 3A",
                                                                                  dplyr::if_else(x >=60 & x <90, "Stage 2",
                                                                                                 dplyr::if_else(x >=90, "Stage 1", "NA"
-                                                                                                )))))), ordered = TRUE)
+                                                                                                )))))),
+                     ordered = TRUE, levels = c("Stage 1", "Stage 2", "Stage 3A", "Stage 3B", "Stage 4", "Stage 5"))
   }
   # check output detail
   else if(style == 'num') {
@@ -25,8 +26,9 @@ grp_ckd <- function(x, style = 'name') { ## x is numeric eGFR variable
                                                                   dplyr::if_else(x >=4 & x <60, "45-60",
                                                                                  dplyr::if_else(x >=60 & x <90, "60-90",
                                                                                                 dplyr::if_else(x >=90, "90+", "NA"
-                                                                                                )))))), ordered = TRUE)
+                                                                                                )))))),
+                     ordered = TRUE, levels = c("<15", "15-30", "30-45", "45-60", "60-90", ">90") )
   }
-  
+
   return(output)
 }

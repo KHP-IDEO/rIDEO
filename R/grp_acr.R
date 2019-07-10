@@ -10,16 +10,18 @@ grp_acr <- function(x, style = 'name') { ## x is numeric ACR variable
     # main function
     output <- factor(dplyr::if_else(x <3.0, "A1",
                                     dplyr::if_else(x >=3.0 & x <=30, "A2",
-                                                   dplyr::if_else(x >30, "A3", "NA"))), ordered = TRUE)
+                                                   dplyr::if_else(x >30, "A3", "NA"))),
+                     ordered = TRUE, levels = c("A1", "A2", "A3"))
   }
   # check output detail
   else if(style == 'num') {
     # main function
     output <- factor(dplyr::if_else(x <3.0, "<3",
                                     dplyr::if_else(x >=3.0 & x <=30, "3-30",
-                                                   dplyr::if_else(x >30, ">30", "NA"))), ordered = TRUE)
+                                                   dplyr::if_else(x >30, ">30", "NA"))),
+                     ordered = TRUE, levels = c("<3", "3-30", ">30"))
   }
-  
+
   # check output detail
   else if(style == 'alb') {
     # main function
@@ -27,6 +29,6 @@ grp_acr <- function(x, style = 'name') { ## x is numeric ACR variable
                                     dplyr::if_else(x >=3.0 & x <=30, "Microalbuminuria",
                                                    dplyr::if_else(x >30, "Macroalbuminuria", "NA"))), ordered = TRUE)
   }
-  
+
   return(output)
 }
