@@ -70,7 +70,7 @@ grp_med <- function(x, depth = 'full') { # x is character variable of medicines
       # main function
       output <- factor(dplyr::if_else(stringr::str_detect(x_lower, paste(insulins, collapse = "|")), "Insulin",
                                       dplyr::if_else(stringr::str_detect(x_lower, paste(metformin, collapse = "|")), "Metformin",
-                                                     dplyr::if_else(stringr::str_detect(x_lower, paste(oral_diab_other, collapse = "|")), "Other OAD",
+                                                     dplyr::if_else(stringr::str_detect(x_lower, paste(other_OAD, collapse = "|")), "Other OAD",
                                                                     dplyr::if_else(stringr::str_detect(x_lower, paste(lucentis, collapse = "|")), "Lucentis",
                                                                                    dplyr::if_else(stringr::str_detect(x_lower, paste(statins, collapse = "|")), "Statins",
                                                                                                   dplyr::if_else(stringr::str_detect(x_lower, paste(anti_hypertensives, collapse = "|")), "Anti-hypertensives", "Other"))))))
