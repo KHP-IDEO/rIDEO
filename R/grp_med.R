@@ -55,7 +55,7 @@ grp_med <- function(x, depth = 'full') { # x is character variable of medicines
       # vectors of medications by group
       insulins <- c("insulin", "abasaglar", "actrapid", "apidra", "degludec", "glarine", "humalog", "human mixtard", "humulin", "hypurin", "insulatard", "insuman", "lantus", "levemir", "mixtard", "novomix", "novorapid", "toujeo", "tresiba", "velosulin")
       metformin <- c("metformin", "diabex", "diaformin", "dianben", "fortamet", "glucophage", "glumetza", "obimet", "riomet")
-      oral_diab_other <- c("amaryl", "daonil", "deamelin-s", "diamicron", "glibenclamide", "glibenese", "gliclazide", "glimepiride", "glipizide", "gliquidone", "glucotrol", "glurenorm", "glyburide", "glyclpramide", "minodiab", "tolbutamide",
+      other_OAD <- c("amaryl", "daonil", "deamelin-s", "diamicron", "glibenclamide", "glibenese", "gliclazide", "glimepiride", "glipizide", "gliquidone", "glucotrol", "glurenorm", "glyburide", "glyclpramide", "minodiab", "tolbutamide",
                            "nateglinide", "prandin", "repaglinide", "starlix", "actos", "avandia", "pioglitazone", "rosiglitazone", "eucreas", "galvus", "janumet", "januvia", "linagliptin", "onglyza", "saxagliptin", "sitagliptin", "tradjenta", "vildagliptin",
                            "bydureon", "byetta", "dulaglutide", "exenatide", "liraglutide", "lixisenatide", "lyxumia", "ozempic", "semaglutide", "trulicity", "victoza", "canagliflozin", "dapagliflozin", "empagliflozin", "farxiga", "forxiga", "invokana", "jardiance", "glucobay", "acarbose")
       lucentis <- c("lucentis", "ranibizumab")
@@ -70,7 +70,7 @@ grp_med <- function(x, depth = 'full') { # x is character variable of medicines
       # main function
       output <- factor(dplyr::if_else(stringr::str_detect(x_lower, paste(insulins, collapse = "|")), "Insulin",
                                       dplyr::if_else(stringr::str_detect(x_lower, paste(metformin, collapse = "|")), "Metformin",
-                                                     dplyr::if_else(stringr::str_detect(x_lower, paste(oral_diab_other, collapse = "|")), "Other oral diabetics",
+                                                     dplyr::if_else(stringr::str_detect(x_lower, paste(oral_diab_other, collapse = "|")), "Other OAD",
                                                                     dplyr::if_else(stringr::str_detect(x_lower, paste(lucentis, collapse = "|")), "Lucentis",
                                                                                    dplyr::if_else(stringr::str_detect(x_lower, paste(statins, collapse = "|")), "Statins",
                                                                                                   dplyr::if_else(stringr::str_detect(x_lower, paste(anti_hypertensives, collapse = "|")), "Anti-hypertensives", "Other"))))))
