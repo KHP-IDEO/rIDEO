@@ -6,7 +6,7 @@ Creates factor variable grouping medications into sub-types relevant to diabetes
 }
 \description{
 Takes a vector of drug names (generic and brand names accepted) and allocates to relevant level of created grouped factor.
-The default 'full' depth classifies oral diabetics and anti-hypertensives into sub-classes. Optional 'part' depth, groups these
+The default 'full' depth classifies oral anti-diabetics (OADs) and anti-hypertensives into sub-classes. Optional 'part' depth, groups these
 drug classes into broad factor levels.
 }
 \usage{
